@@ -16,6 +16,7 @@ services:
     entrypoint: sh ./scripts/start_node.sh
     volumes: 
       - ./:/app
+      - ~/.ssh:/root/.ssh
     networks:
       - TEST
 

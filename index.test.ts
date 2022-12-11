@@ -25,7 +25,7 @@ describe("getTemplateByCountryEndPoint", () => {
 
 
 
-// const branch_server = Request('http://localhost:1341/v1')
+// const branch_servelkjr = Request('http://localhost:1341/v1')
 // const getTemplateByCountryEndPoint = "/verify/applications/types/country/"
 
 // /**
