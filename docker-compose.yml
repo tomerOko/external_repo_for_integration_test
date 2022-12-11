@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  
+  node_backend:
+    # docker run -i
+    stdin_open: true 
+    # docker run -t
+    tty: true        
+    #image name
+    image: integration_test:latest
+    #location of docker file
+    build: ./
+    #container bame for 'docker exec -it <container name>' as an example
+    container_name: integration_test.container
+    #location of initizalization file
+    entrypoint: sh ./scripts/start_node.sh
+    volumes: 
+      - ./:/app
+    networks:
+      - TEST
+
+networks:
+  TEST:
+    name: TEST
+    driver: bridge
+
