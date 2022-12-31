@@ -15,6 +15,9 @@ RUN apk add git
 # needed for git opperations
 RUN apk add openssh-client
 
+# needed for network testing
+RUN apk add curl
+
 # needed for git opperations
 RUN mkdir ~/.ssh
 RUN ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts

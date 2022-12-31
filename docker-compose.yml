@@ -14,14 +14,14 @@ services:
     container_name: integration_test.container
     #location of initizalization file
     entrypoint: sh ./scripts/start_node.sh
+    hostname: 0.0.0.0
     volumes: 
       - ./:/app
       - ~/.ssh:/root/.ssh
     networks:
-      - TEST
+      - test
 
 networks:
-  TEST:
-    name: TEST
-    driver: bridge
-
+  test:
+    external:
+      name: MY_NETWORK
